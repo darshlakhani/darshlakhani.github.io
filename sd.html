@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Systems Design Approach</title>
+		<title>System Design Approach</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
     
@@ -80,7 +80,7 @@
 
 				              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 				                <li><a href="index.html#about-section" class="nav-link">About Me</a></li>
-				                <li class="has-children"><a href="#home-section" class="nav-link">Systems Design</a></li>
+				                <li><a href="#home-section" class="nav-link">System Design</a></li>
 				                <li><a href="index.html#blog-section" class="nav-link">Blogs</a></li>
 				                <!-- <li><a href="#services-section" class="nav-link">Services</a></li> -->
 				                <li><a href="index.html#contact-section" class="nav-link">Contact</a></li>
@@ -101,7 +101,7 @@
 		        <div class="row">
 		          <div class="col-md-12 align-self-center text-center text-md-left">
 		            <div class="intro-text">
-		              <h1 style="color: #a2c0be; font-size: 350%; font-family: Comic Sans MS" class="text-center"><span class="d-md-block">Systems Design</span></h1>
+		              <h1 style="color: #a2c0be; font-size: 350%; font-family: Comic Sans MS" class="text-center"><span class="d-md-block">System Design</span></h1>
 		              <p>I highly recommend taking the course <a href="https://www.educative.io/courses/grokking-the-system-design-interview">Grokking the System Design Interview.</a></p>
 		              <p><a href="#step-section">Read More..</a></p>
 		             <!--  <p style="font-style: italic;"><span class="d-block mb-3 text-center"><a href="#ds-section">Data Structure & Algo</a></span><span class="d-block mb-3 text-center"><a href="#sd-section">Systems Design</a></span><span class="d-block mb-3 text-center"><a href="#oo-section">Object Oriented</a></span><span class="d-block mb-3 text-center"><a href="#java-section">Java</a></span><span class="d-block mb-3 text-center"><a href="#db-section">Database</a></span></p> -->
@@ -120,8 +120,8 @@
           				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
             				<h2 class="text-black mb-3">Steps:</h2>
 				            <ul class="list-unstyled ul-check primary mb-0">
-				            	<li><a href="#hl-section">Note the High Level Reuirements from Interviewer</a></li>
-				            	<li><a href="#ques-section">Ask follow up Questions</a></li>
+				            	<li><a href="#hl-section">Note the high level Requirements from Interviewer</a></li>
+				            	<li><a href="#ques-section">Ask follow up questions</a></li>
 				            	<li><a href="#component-section">Components of the System</a></li>
 				            	<li><a href="#diag-section">Draw components and interactions between them</a></li>
 				            	<li><a href="#detail-section">Discuss various components involved</a></li>
@@ -153,7 +153,7 @@
       			<div class="container">
         			<div class="row justify-content-center" data-aos="fade-up">
           				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
-          					<h2 class="text-black mb-3">Follow up Questions</h2>
+          					<h2 class="text-black mb-3">Follow up questions</h2>
           					<ul class="list-unstyled primary mb-0">
 				              <li>To understand expected load on the system:
 				              	<ul class="list-unstyled ul-paw primary mb-0">
@@ -201,6 +201,7 @@
           				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
           					<h2 class="text-black mb-3">System Diagram</h2>
           					<img src="images/Components.jpg" />
+          					<p>Note: This diagram is generic one. Just to give an idea what are the different components and where they can be used. It is not specific to any problem. It will change with every problem.</p>
           					<p><a href="#detail-section">Next</a></p>
           				</div>
           			</div>
@@ -215,7 +216,7 @@
           					<p class="lead" style="font-style: italic;">UI Client: </p>
           					<ul class="list-unstyled ul-paw primary mb-0">
 				              <li>Based on the requirement we can have Web or Mobile(for e.g. Android, IOS) as client for our backend service</li>
-				              <li>This component communicates with service using some protocol. For e.g we can have communication through REST API over HTTP</li>
+				              <li>This component communicates with service using some protocol. For e.g we can have communication through REST API over HTTP or it can use Websocket or Long Polling for exchanging messages.</li>
 				            </ul>
 				            <span> </span>
 				            <p class="lead" style="font-style: italic;">Data Model and Database: </p>
