@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>System Design Approach</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/dFavicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/dFavicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/dFavicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/dFavicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/dFavicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/dFavicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/dFavicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/dFavicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/dFavicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/dFavicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/dFavicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/dFavicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/dFavicon/favicon-16x16.png">
+    <link rel="manifest" href="images/dFavicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="System Design, Learn how to approach system design questions">
+    <meta name="description" content="Generic approach to system design Interview question">
+    
+	</head>
+	<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+  
+
+	 	<div id="overlayer"></div>
+	<!--   	<div class="loader">
+	    	<div class="spinner-border text-primary" role="status">
+      			<span class="sr-only">Loading...</span>
+    		</div>
+  		</div> -->
+
+
+  		<div class="site-wrap">
+
+    		<div class="site-mobile-menu site-navbar-target">
+      			<div class="site-mobile-menu-header">
+        			<div class="site-mobile-menu-close mt-3">
+          				<span class="icon-close2 js-menu-toggle"></span>
+        			</div>
+      			</div>
+      			<div class="site-mobile-menu-body"></div>
+    		</div>
+   
+    
+    		<header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
+
+      			<div class="container">
+        			<div class="row align-items-center">
+          
+          				<div class="col-6 col-xl-2">
+            				<h1 class="mb-0"><a href="index.html#home-section" class=" mb-0"><img src="images/emoji.webp" style="height: 30px; width: 30px;" /><span class="text-primary"></span> </a></h1>
+          				</div>
+
+          				<div class="col-12 col-md-10 d-none d-xl-block">
+            				<nav class="site-navigation position-relative text-right" role="navigation">
+
+				              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+				                <li><a href="index.html#about-section" class="nav-link">About Me</a></li>
+				                <li><a href="#home-section" class="nav-link">Cache Layers</a></li>
+				                <li><a href="index.html#blog-section" class="nav-link">Blogs</a></li>
+				                <!-- <li><a href="#services-section" class="nav-link">Services</a></li> -->
+				                <li><a href="index.html#contact-section" class="nav-link">Contact</a></li>
+				              </ul>
+            				</nav>
+          				</div>
+
+
+          				<div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        			</div>
+      			</div>
+      
+    		</header>
+
+    		<section class="site-blocks-cover overflow-hidden bg-light home-section">
+		      <div class="container">
+		        <div class="row">
+		          <div class="col-md-12 align-self-center text-center text-md-left">
+		            <div class="intro-text">
+		              <h1 style="color: #a2c0be; font-size: 350%; font-family: Comic Sans MS" class="text-center"><span class="d-md-block">Caching at Different Components of System</span></h1>
+		              <p>This post will cover the different layers where Cache can be used.</p>
+		              <p><a href="#step-section">Read More..</a></p>
+		             <!--  <p style="font-style: italic;"><span class="d-block mb-3 text-center"><a href="#ds-section">Data Structure & Algo</a></span><span class="d-block mb-3 text-center"><a href="#sd-section">Systems Design</a></span><span class="d-block mb-3 text-center"><a href="#oo-section">Object Oriented</a></span><span class="d-block mb-3 text-center"><a href="#java-section">Java</a></span><span class="d-block mb-3 text-center"><a href="#db-section">Database</a></span></p> -->
+		            </div>
+		          </div>
+		          <!-- <div class="col-md-5 align-self-end text-center text-md-right">
+		            <img src="images/d.jpg" alt="Image" class="img-fluid cover-img" style="border-radius: 60%; margin-top: 10%; margin-bottom: 20%;">
+		          </div> -->
+		        </div>
+		      </div>
+    		</section> 
+
+    		<section class="site-section" id="list-section">
+      			<div class="container">
+        			<div class="row justify-content-center" data-aos="fade-up">
+          				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
+            				<h2 class="text-black mb-3"></h2>
+				            <ul class="list-unstyled ul-check primary mb-0">
+				            	<li><a href="#bc-section">Browser Cache</a></li>
+				            	<li><a href="#cdn-section">CDN</a></li>
+				            	<li><a href="#wsc-section">Web Server Cache</a></li>
+				            	<li><a href="#ac-section">Application Cache</a></li>
+				            	<li><a href="#dbc-section">Database Cache</a></li>
+				            </ul>
+          				</div>
+        			</div>
+      			</div>
+    		</section>
+
+    		<section class="site-section" id="bc-section">
+      			<div class="container">
+        			<div class="row justify-content-center" data-aos="fade-up">
+          				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
+          					<h2 class="text-black mb-3">Browser Cache</h2>
+          					<p>A browser cache holds all documents downloaded via HTTP by the user. This cache is used to make visited documents available for back/forward navigation, saving, viewing-as-source, etc. without requiring an additional trip to the server. It likewise improves offline browsing of cached content.</p>
+				            <p><a href="#cdn-section">Next</a></p>
+          				</div>
+          			</div>
+          		</div>
+          	</section>
+
+    		<section class="site-section" id="cdn-section">
+      			<div class="container">
+        			<div class="row justify-content-center" data-aos="fade-up">
+          				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
+          					<h2 class="text-black mb-3">CDN</h2>
+          					<p> CDN acts as a layer between user and server to deliver content efficiently.  
+It caches content (such as images, videos, or webpages) in proxy servers that are located closer to end users than origin servers. (A proxy server is a server that receives requests from clients and passes them along to other servers.) Because the servers are closer to the user making the request, a CDN is able to deliver content more quickly.
+</p>
+				            <p><a href="#wsc-section">Next</a></p>
+          				</div>
+          			</div>
+          		</div>
+          	</section>
+
+    		<section class="site-section" id="wsc-section">
+      			<div class="container">
+        			<div class="row justify-content-center" data-aos="fade-up">
+          				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
+          					<h2 class="text-black mb-3">Web Server Cache</h2>
+          					<p>the cache simply remembers the previous requests made by the user. So when the user requests a page that he/she had visited previously, the request will be sent to the cache to retrieve the content instead of the longer route of sending the request all the way back to the origin. This means that the cached content is closer to the user, thus, resulting in quicker response time.
+</p>
+				            <p><a href="#ac-section">Next</a></p>
+          				</div>
+          			</div>
+          		</div>
+          	</section>
+
+
+    		<section class="site-section" id="diag-section">
+      			<div class="container">
+        			<div class="row justify-content-center" data-aos="fade-up">
+          				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
+          					<h2 class="text-black mb-3">Example Diagram</h2>
+          					<img src="images/Cache-Image.jpg" />
+          					<p>Note: I have created this based on my understanding of different layers of cache, please let me know if there is a mistake.</p>
+          					<p><a href="#detail-section">Next</a></p>
+          				</div>
+          			</div>
+          		</div>
+          	</section>
+
+    		<section class="site-section" id="ac-section">
+      			<div class="container">
+        			<div class="row justify-content-center" data-aos="fade-up">
+          				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
+          					<h2 class="text-black mb-3">Application Cache</h2>
+          					<p>Application caching is different from database caching. Application cache is local to application and each application server/application will have its own cache. Application caching is used to store data that does not change often and read heavy. One example is JVM cache for application cache. It is used to save data like timezones, locale etc.</p>
+          					<p><a href="#detail-section">Next</a></p>
+          				</div>
+          			</div>
+          		</div>
+          	</section>
+
+    		<section class="site-section" id="dbc-section">
+      			<div class="container">
+        			<div class="row justify-content-center" data-aos="fade-up">
+          				<div class="col-lg-12 align-self-center mr-auto text-left heading-section mb-5">
+          					<h2 class="text-black mb-3">Database Cache</h2>
+          					<p>Database cache is layer between application and database. The idea with this cache is to store data that is read more often by application. The raw response of the data is stored in cache as DB read has higher latency.</p>
+          				</div>
+          			</div>
+          		</div>
+          	</section>          	
+
+    	</div>
+    	<script src="js/jquery-3.3.1.min.js"></script>
+	  	<script src="js/jquery-ui.js"></script>
+	  	<script src="js/popper.min.js"></script>
+	  	<script src="js/bootstrap.min.js"></script>
+	  	<script src="js/owl.carousel.min.js"></script>
+	  	<script src="js/jquery.countdown.min.js"></script>
+	  	<script src="js/jquery.easing.1.3.js"></script>
+	  	<script src="js/aos.js"></script>
+	  	<script src="js/jquery.fancybox.min.js"></script>
+	  	<script src="js/jquery.sticky.js"></script>
+	  	<script src="js/isotope.pkgd.min.js"></script>
+
+	  
+	  	<script src="js/main.js"></script>
+    </body>
+
+</html>
